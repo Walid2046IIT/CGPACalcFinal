@@ -69,6 +69,7 @@ public class Result extends JFrame {
 	private JTextField textField_44;
 	private JTextField textField_45;
 	private JTextField textField_46;
+	private JTextField textField_38;
 
 	
 	public static void main(String[] args) {
@@ -306,7 +307,7 @@ public class Result extends JFrame {
 				else
 				{
 					textField_15.setBackground(new Color(0, 255, 0));
-					textField_25.setText("        X");	
+					textField_25.setText("X");	
 				}
 				
 				
@@ -323,7 +324,7 @@ public class Result extends JFrame {
 				else
 				{
 					textField_21.setBackground(new Color(0, 255, 0));
-					textField_26.setText("        X");
+					textField_26.setText("X");
 				}
 				
 				
@@ -339,7 +340,7 @@ public class Result extends JFrame {
 				else
 				{
 					textField_22.setBackground(new Color(0, 255, 0));
-					textField_27.setText("        X");
+					textField_27.setText("X");
 				}
 				
 				
@@ -357,7 +358,7 @@ public class Result extends JFrame {
 				else
 				{
 					textField_23.setBackground(new Color(0, 255, 0));
-					textField_28.setText("        X");
+					textField_28.setText("X");
 				}
 				
 				
@@ -375,7 +376,7 @@ public class Result extends JFrame {
 				else
 				{
 					textField_24.setBackground(new Color(0, 255, 0));
-					textField_29.setText("        X");
+					textField_29.setText("X");
 				}
 				
 				
@@ -1324,6 +1325,22 @@ public class Result extends JFrame {
 						 double cgpa;
 						 
 						  cgpa=(((edcgp*3)+(oopgp*3)+(dmgp*3)+(lagp*3)+(bsgp*3)+(edclgp*1.5)+(ooplgp*1.5)+vivaIngp)/19);
+						  
+						  if(edcgp==0 || oopgp==0 || dmgp==0 || lagp==0 || bsgp==0 || edclgp==0 || ooplgp==0 || vivaIngp==0)
+						  {
+							  
+							  
+							  textField_38.setText("Failed..!!");
+							  textField_38.setBackground(new Color(255, 0, 0));
+							  
+						  }
+						  else
+						  {
+							 
+							  textField_38.setText("Passed..!!");
+							  textField_38.setBackground(new Color(0, 255, 0));
+							  
+						  }
 						 
 						 
 						// String cgp=  Double.toString(cgpa);
@@ -1339,7 +1356,7 @@ public class Result extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnNewButton_1.setBounds(957, 294, 128, 61);
+		btnNewButton_1.setBounds(957, 311, 128, 61);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel_5 = new JLabel("");
@@ -1437,5 +1454,24 @@ public class Result extends JFrame {
 		textField_46.setColumns(10);
 		textField_46.setBounds(857, 422, 77, 20);
 		contentPane.add(textField_46);
+		
+		JButton btnNewButton_2 = new JButton("Reset");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				new Result().setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_2.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 20));
+		btnNewButton_2.setBounds(973, 401, 96, 61);
+		contentPane.add(btnNewButton_2);
+		
+		textField_38 = new JTextField();
+		textField_38.setFont(new Font("Tahoma", Font.BOLD, 20));
+		textField_38.setBounds(957, 240, 104, 49);
+		contentPane.add(textField_38);
+		textField_38.setColumns(10);
 	}
 }

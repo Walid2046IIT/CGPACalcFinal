@@ -109,8 +109,8 @@ public class Login extends JFrame {
 				text1.setColumns(10);
 				
 				
-				String password="iit42";
-				String code="Biplob42";
+				String password="42";
+				String code="MBH";
 				
 				var userPWord = passwordField.getPassword();
 				String userPWord1 = String.valueOf(userPWord);
@@ -154,5 +154,17 @@ public class Login extends JFrame {
 		lblNewLabel_7.setIcon(new ImageIcon(img3));
 		lblNewLabel_7.setBounds(653, 156, 130, 128);
 		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		Image img4=new ImageIcon(this.getClass().getResource("/uicon.png")).getImage();
+		lblNewLabel_6.setIcon(new ImageIcon(img4));
+		lblNewLabel_6.setBounds(471, 261, 51, 53);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_6_1 = new JLabel("");
+		Image img5=new ImageIcon(this.getClass().getResource("/picon.png")).getImage();
+		lblNewLabel_6_1.setIcon(new ImageIcon(img5));
+		lblNewLabel_6_1.setBounds(471, 333, 51, 53);
+		contentPane.add(lblNewLabel_6_1);
 	}
 }
